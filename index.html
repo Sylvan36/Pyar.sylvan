@@ -216,7 +216,7 @@
           <button class="features"onclick="Tabort4()" id="del4 "> Delete </button>
         </div>
       
-      
+  
         
         <h2></h2>
         <input type="button" onclick="location.href='sxs.html';" value="PAY" />
@@ -228,6 +228,7 @@
          let samuel0 = 0
         let antal_troja_ett0 = 0
         let pris_per_click0 = 360
+        let Pyarrozik = 'A'
         let samuel = 0
         let antal_troja_ett = 0
         let pris_per_click = 360
@@ -244,11 +245,13 @@
         function kop_0() {
           antal_troja_ett0 = antal_troja_ett0 + 1;
 
+
           skrivut()
         }
         function Tabort0( ){
           antal_troja_ett0 = antal_troja_ett0 - 1;
-
+         
+         
          skrivut()
 
         }
@@ -294,29 +297,61 @@
           antal_troja_ett4 = antal_troja_ett4 - 1;
 
          skrivut()
-
+        
         }
+//Animation
 
         function skrivut() {
 
-          let str0 = "Sek "  + antal_troja_ett0*pris_per_click0 + " ";
+          let bokstaver = "";
+          
+          let str0 = "Sek " + antal_troja_ett0*pris_per_click0 + " ";
           document.getElementById('Sek0').innerHTML =  str0;
 
+          for (let step = 0; step < antal_troja_ett0; step++) 
+          {
+
+            bokstaver = bokstaver + "A";
+          }
+          //let strv = "Sek " + Pyarrozik  + " ";
+          //document.getElementById('Sek0').innerHTML =  strv;
 
           let str1 = "Sek "  + antal_troja_ett*pris_per_click + " ";
           document.getElementById('Sek1').innerHTML =  str1;
+          for (let step = 0; step < antal_troja_ett; step++) 
+          {
 
+            bokstaver = bokstaver + "B";
+          }
           let str2 = "Sek "  + antal_troja_ett2*pris_per_click2 + " ";
           document.getElementById('Sek2').innerHTML =  str2;
+          for (let step = 0; step < antal_troja_ett2; step++) 
+          {
 
+            bokstaver = bokstaver + "C";
+          }
           let str3 = "Sek "  + antal_troja_ett3*pris_per_click3 + " ";
           document.getElementById('Sek3').innerHTML =  str3;
-        
+          for (let step = 0; step < antal_troja_ett3; step++) 
+          {
+
+            bokstaver = bokstaver + "D";
+          }
           let str4 = "Sek "  + antal_troja_ett4*pris_per_click4 + " ";
           document.getElementById('Sek4').innerHTML =  str4;
+          for (let step = 0; step < antal_troja_ett4; step++) 
+          {
 
-          let pris = antal_troja_ett*pris_per_click + antal_troja_ett2*pris_per_click2 + antal_troja_ett3*pris_per_click3 + antal_troja_ett4*pris_per_click4
-          document.cookie = 'TOTALLY:'+pris; 
+            bokstaver = bokstaver + "E";
+          }
+          let pris = antal_troja_ett*pris_per_click + antal_troja_ett0*pris_per_click0 + antal_troja_ett2*pris_per_click2 + antal_troja_ett3*pris_per_click3 + antal_troja_ett4*pris_per_click4
+          let meddelande = 'TOTALLY:'+pris; 
+          
+          let prisDif = Pyarrozik ;
+          
+          meddelande = meddelande +  " " + bokstaver
+          
+          document.cookie = meddelande
           global.localStorage.setItem("mySharedData",str4);
       
         }
