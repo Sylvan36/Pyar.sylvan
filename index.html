@@ -231,16 +231,16 @@
         let Pyarrozik = 'A'
         let samuel = 0
         let antal_troja_ett = 0
-        let pris_per_click = 360
+        let pris_per_click = 419
         let samuel2 = 0
         let antal_troja_ett2 = 0
-        let pris_per_click2 = 560
+        let pris_per_click2 = 259
         let samuel3 = 0
         let antal_troja_ett3 = 0
-        let pris_per_click3 = 360
+        let pris_per_click3 = 259
         let samuel4 = 0
         let antal_troja_ett4 = 0
-        let pris_per_click4 = 760
+        let pris_per_click4 = 419
 
         function kop_0() {
           antal_troja_ett0 = antal_troja_ett0 + 1;
@@ -345,13 +345,12 @@
             bokstaver = bokstaver + "E";
           }
           let pris = antal_troja_ett*pris_per_click + antal_troja_ett0*pris_per_click0 + antal_troja_ett2*pris_per_click2 + antal_troja_ett3*pris_per_click3 + antal_troja_ett4*pris_per_click4
-          let meddelande = 'TOTALLY:'+pris; 
+          let meddelande = 'TOTALLY' + pris; 
           
-          let prisDif = Pyarrozik ;
           
-          meddelande = meddelande +  " " + bokstaver
+          meddelande = meddelande + bokstaver
           
-          document.cookie = meddelande
+          document.cookie = meddelande;
           global.localStorage.setItem("mySharedData",str4);
       
         }
